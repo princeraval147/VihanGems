@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import HomePage from './component/Home'
+import Header from './component/Header'
 
 const App = () => {
 
   return (
     <>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      {/* <Header /> */}
 
+      <HomePage />
     </>
   )
 }
