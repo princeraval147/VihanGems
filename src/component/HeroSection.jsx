@@ -1,15 +1,7 @@
-import { useCallback } from "react";
 import { motion } from "framer-motion";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { loadSlim } from "tsparticles-slim";
 import SparkleParticles from "./SparkleParticles";
 
 export default function HeroSection() {
-
-    const particlesInit = useCallback(async (engine) => {
-        await loadSlim(engine);
-    }, []);
 
     return (
         <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
