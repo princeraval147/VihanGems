@@ -5,7 +5,12 @@ export default function HeroSection() {
 
     return (
         <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-            <SparkleParticles />
+            <div className="absolute inset-0 bg-black/40 z-0" />
+
+
+            <div className="absolute inset-0 z-[1]">
+                <SparkleParticles />
+            </div>
 
             {/* Content */}
             <motion.div
@@ -38,7 +43,7 @@ export default function HeroSection() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9 }}
                 >
-                    <button className="px-6 py-3 border border-white hover:border-blue-400 hover:text-blue-300 rounded-full transition duration-300">
+                    <button className="group px-6 py-3 border border-white rounded-full transition-all duration-300 hover:border-blue-400 hover:text-blue-300">
                         View Collection
                     </button>
 
