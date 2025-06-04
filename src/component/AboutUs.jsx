@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import {
     VerticalTimeline,
@@ -8,6 +9,11 @@ import { MdLocalShipping, MdCheckCircle } from 'react-icons/md';
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function AboutUsPage() {
+
+
+    useEffect(() => {
+        document.title = "Vihan Gems | About Us";
+    }, []);
 
 
     const timelineItems = [
@@ -102,7 +108,6 @@ export default function AboutUsPage() {
 
 
     return (
-        // <div className="min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white font-sans overflow-x-hidden px-6 py-20">
         <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden px-6 py-20">
 
             <motion.div
@@ -136,7 +141,9 @@ export default function AboutUsPage() {
                 </div>
             </motion.div>
 
-            {/* <DiamondJourney /> */}
+            <div className="my-16 border-t border-white/10" />
+
+            {/* Diamond Journey  */}
             <h2 className="text-4xl font-bold text-center mt-24 mb-12">The Journey of a Diamond</h2>
             <VerticalTimeline lineColor="#1e40af">
                 {timelineItems.map((item, idx) => (
@@ -155,8 +162,9 @@ export default function AboutUsPage() {
                 ))}
             </VerticalTimeline>
 
+            <div className="my-16 border-t border-white/10" />
 
-            {/* <CertificatesPage /> */}
+            {/* Certificates */}
             <div className="min-h-screen text-white px-6 py-16">
                 <div className="max-w-6xl mx-auto">
                     <motion.h1
@@ -188,17 +196,18 @@ export default function AboutUsPage() {
                                 viewport={{ once: true }}
                             >
                                 <div className="w-[350px] h-[200px] flex justify-center">
-                                    <img src={cert.image} alt={cert.title} className="h-48 object-contain" />
+                                    <img src={cert.image} alt={cert.title} className="h-48 md:h-32 sm:h-16 object-contain" />
                                 </div>
 
                                 <div className="flex-1 text-center lg:text-left mb-4 lg:mb-0">
                                     <h1 className="text-[30px] font-semibold mb-2">{cert.title}</h1>
-                                    <p className="text-gray-200 w-4/5 text-sm mb-4">{cert.desc}</p>
+                                    <p className="text-gray-200 text-sm mb-4 max-w-xl mx-auto lg:mx-0">{cert.desc}</p>
+                                    {/* <p className="text-gray-200 max-w-xl text-sm mb-4">{cert.desc}</p> */}
                                     <a
                                         href={cert.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-block border border-white text-white px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all duration-300"
+                                        className="inline-block border border-white text-white px-4 py-2 rounded-full hover:bg-white/20 hover:text-white transition-all duration-300"
                                     >
                                         Read More →
                                     </a>
