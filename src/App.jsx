@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import HomePage from './component/Home'
+import React from 'react'
 import Header from './component/Header'
+import { Outlet } from 'react-router-dom'
+import Footer from './component/Footer'
 
 const App = () => {
 
   return (
     <>
-      {/* <Header /> */}
-
-      <HomePage />
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   )
 }
