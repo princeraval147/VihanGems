@@ -5,15 +5,13 @@ import { NavLink } from "react-router-dom";
 export default function HeroSection() {
     return (
         <>
-
+            {/* Sparkle Particles */}
             <div className="absolute inset-0 z-10 pointer-events-none">
                 <SparkleParticles />
             </div>
             <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
                 {/* Background overlay */}
                 <div className="absolute inset-0 bg-black/50 z-0" />
-
-                {/* Sparkle Particles */}
 
                 {/* Content */}
                 <motion.div

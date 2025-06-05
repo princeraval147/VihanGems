@@ -131,12 +131,7 @@ const Header = () => {
                             key={link.name}
                             to={link.to}
                             onClick={closeMenu}
-                            className={({ isActive }) =>
-                                `hover:text-blue-300 transition ${isActive && location.pathname === link.to.split("#")[0]
-                                    ? "text-blue-300"
-                                    : ""
-                                }`
-                            }
+                            className="block hover:text-blue-300"
                         >
                             {link.name}
                         </NavLink>
