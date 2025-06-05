@@ -63,38 +63,7 @@ const HomePage = () => {
                 <HeroSection />
 
                 {/* Craftsmanship Section */}
-                <section className="py-20 px-6 md:px-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -40 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                        className="max-w-6xl mx-auto text-center"
-                    >
-                        <h2 className="text-4xl font-semibold mb-6 text-white">Our Craftsmanship</h2>
-                        <p className="text-lg leading-relaxed text-gray-300 mb-6">
-                            Each diamond we cut tells a story of elegance and meticulous attention to detail. We
-                            combine advanced technology with expert artisans to create masterpieces that last
-                            generations.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                            <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
-                                <h3 className="text-xl font-semibold mb-2">Precision Cutting</h3>
-                                <p className="text-sm text-gray-300">High-precision tools for perfect symmetry and brilliance.</p>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
-                                <h3 className="text-xl font-semibold mb-2">Sustainability</h3>
-                                <p className="text-sm text-gray-300">Ethical sourcing and eco-friendly manufacturing practices.</p>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-lg p-6 rounded-xl border border-white/10">
-                                <h3 className="text-xl font-semibold mb-2">Global Reach</h3>
-                                <p className="text-sm text-gray-300">Trusted by customers in over 50 countries.</p>
-                            </div>
-                        </div>
-                    </motion.div>
-                </section>
+
 
                 <section id="products" className="relative bg-gradient-to-r from-[#1a1f38] to-[#2e2f70] text-white py-20 px-6 overflow-hidden">
                     {/* Decorative Background Element */}
