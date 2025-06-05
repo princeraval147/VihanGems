@@ -195,8 +195,8 @@ export default function AboutUsPage() {
                                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                                 viewport={{ once: true }}
                             >
-                                <div className="w-[350px] h-[200px] flex justify-center">
-                                    <img src={cert.image} alt={cert.title} className="h-48 md:h-32 sm:h-16 object-contain" />
+                                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg flex justify-center items-center">
+                                    <img src={cert.image} alt={cert.title} className="w-full max-h-32 object-contain" />
                                 </div>
 
                                 <div className="flex-1 text-center lg:text-left mb-4 lg:mb-0">
