@@ -1,34 +1,37 @@
 import { motion } from "framer-motion";
 import SparkleParticles from "./SparkleParticles";
+import { NavLink } from "react-router-dom";
 
 export default function HeroSection() {
-
     return (
-        <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-            <div className="absolute inset-0 bg-black/40 z-0" />
+        <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
+            {/* Background overlay */}
+            <div className="absolute inset-0 bg-black/50 z-0" />
 
-
-            <div className="absolute inset-0 z-[1]">
+            {/* Sparkle Particles */}
+            <div className="absolute inset-0 z-10 pointer-events-none">
                 <SparkleParticles />
             </div>
 
             {/* Content */}
             <motion.div
-                className="text-center px-6 z-10"
+                className="relative z-20 max-w-3xl text-center"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.h1
-                    className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
+                    className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wide mb-6 leading-tight"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                 >
-                    Timeless Brilliance by <span className="text-blue-300">Vihan Gems</span>
+                    Timeless Brilliance by{" "}
+                    <span className="text-blue-400">Vihan Gems</span>
                 </motion.h1>
+
                 <motion.p
-                    className="text-lg max-w-xl mx-auto text-gray-200"
+                    className="text-xl sm:text-2xl max-w-xl mx-auto text-gray-300 mb-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
@@ -38,23 +41,31 @@ export default function HeroSection() {
 
                 {/* Buttons */}
                 <motion.div
-                    className="mt-8 flex justify-center gap-6"
+                    className="flex flex-wrap justify-center gap-6"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.9 }}
                 >
-                    <button className="group px-6 py-3 border border-white rounded-full transition-all duration-300 hover:border-blue-400 hover:text-blue-300">
+                    <button
+                        className="px-8 py-3 rounded-full border-2 border-white text-white uppercase tracking-wide font-semibold 
+                       hover:border-blue-500 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
+                       transition-colors duration-300 cursor-pointer shadow-md"
+                    >
                         View Collection
                     </button>
 
-                    <button className="border border-[#3B82F6] text-[#3B82F6] hover:bg-[#1E3A8A] hover:text-white transition duration-300 px-6 py-2 rounded-full">
+                    <NavLink
+                        to='/about'
+                        className="px-8 py-3 rounded-full border-2 border-blue-500 text-blue-500 uppercase tracking-wide font-semibold
+                       hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-700
+                       transition-colors duration-300 cursor-pointer shadow-md"
+
+                    >
                         Learn More
-                    </button>
-                    <button className="px-6 py-3 border border-white hover:border-green-400 hover:text-green-300 rounded-full transition duration-300">
-                        Explore
-                    </button>
+                    </NavLink>
                 </motion.div>
             </motion.div>
         </div>
     );
 }
+
