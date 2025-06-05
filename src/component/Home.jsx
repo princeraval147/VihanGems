@@ -127,12 +127,11 @@ const HomePage = () => {
                                     At Vihan Gems, we blend innovation and sustainability to craft breathtaking diamonds. Our lab-grown gems
                                     reflect ethical precision and timeless beauty—perfected with advanced tech and zero compromise on quality.
                                 </p>
-                                <NavLink to='/about' className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
+                                <NavLink to='/diamond-gallery' className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
                                     Read More
                                 </NavLink>
                             </motion.div>
                         </div>
-
                     </div>
                 </section>
 
@@ -142,23 +141,28 @@ const HomePage = () => {
 
                 {/* Animation  */}
                 <div className="bg-white py-8 bg-gradient-to-r from-[#1a1f38] to-[#2e2f70]">
-                    <h1 className="text-center font-bold text-3xl mb-5">Origins</h1>
+                    <h1 className="text-center font-bold text-2xl sm:text-3xl text-white mb-5">Origins</h1>
                     <Marquee speed={50} gradient={false} pauseOnHover={true}>
                         {logos.map((logo, index) => (
-                            <div key={index} className="mx-10">
+                            <div
+                                key={index}
+                                className="mx-4 sm:mx-8 md:mx-10 flex items-center justify-center"
+                            >
                                 <img
                                     src={logo}
                                     alt={`Client logo ${index}`}
-                                    className="h-24"
+                                    className="h-16 sm:h-20 md:h-24 object-contain max-w-[120px] sm:max-w-[160px] md:max-w-[200px]"
                                 />
                             </div>
                         ))}
                     </Marquee>
                 </div>
 
-                <WhyChooseUs />
 
+                <WhyChooseUs />
                 <EventsNews />
+
+
 
 
 
