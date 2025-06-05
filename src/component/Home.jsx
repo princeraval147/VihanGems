@@ -1,13 +1,9 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useLocation } from 'react-router-dom';
-import AboutUsPage from "./AboutUs";
+import { NavLink, useLocation } from 'react-router-dom';
 import ContactUs from "./ContactUs";
 import { WhatsAppButton } from "./WhatsAppButton";
 import Marquee from 'react-fast-marquee';
-import Footer from "./Footer";
-import Header from "./Header";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import HeroSection from "./HeroSection";
 import WhyChooseUs from "./WhyChooseUs";
 import EventsNews from "./EventNews";
@@ -71,6 +67,8 @@ const HomePage = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -40 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                         className="max-w-6xl mx-auto text-center"
@@ -104,11 +102,11 @@ const HomePage = () => {
 
                     <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12 relative z-10">
                         {/* Diamond Video Grid */}
-                        <div className="grid grid-cols-2 gap-4">
+                        {/* <div className="grid grid-cols-2 gap-4">
                             {[1, 2, 3, 4].map((i) => (
                                 <motion.video
                                     key={i}
-                                    src={`/videos/diamond${i}.mp4`} // Place videos here
+                                    src={`/Img/diamond_${i}.mp4`} // Place videos here
                                     alt="Video Don't support"
                                     autoPlay
                                     loop
@@ -118,9 +116,36 @@ const HomePage = () => {
                                     className="rounded-xl shadow-xl border border-white/10"
                                 />
                             ))}
+                        </div> */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 max-w-5xl mx-auto">
+                            {[1, 2, 3, 4].map((i) => (
+                                <motion.div
+                                    key={i}
+                                    whileHover={{ scale: 1.03 }}
+                                    className="rounded-xl overflow-hidden shadow-lg border border-white/10"
+                                >
+                                    <img
+                                        src={`/Img/diamond_${i}.jpg`}
+                                        alt={`Diamond frame ${i}`}
+                                        className="w-full h-44 object-cover"
+                                    />
+                                </motion.div>
+                            ))}
                         </div>
 
-                        <div >
+
+                        {/* <div className="grid grid-cols-2 gap-4">
+                            {[1, 2, 3, 4].map((i) => (
+                                <motion.img               // changed from <motion.video>
+                                    key={i}
+                                    src={`/Img/diamond_${i}.jpg`}  // changed extension
+                                    alt={`Diamond frame ${i}`}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="w-94 h-64 rounded-xl shadow-xl border border-white/10"
+                                />
+                            ))}
+                        </div> */}
+                        <div>
                             <motion.div
                                 initial={{ opacity: 0, x: 40 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -133,9 +158,9 @@ const HomePage = () => {
                                     At Vihan Gems, we blend innovation and sustainability to craft breathtaking diamonds. Our lab-grown gems
                                     reflect ethical precision and timeless beauty—perfected with advanced tech and zero compromise on quality.
                                 </p>
-                                <button className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
-                                    Learn More
-                                </button>
+                                <NavLink to='/about' className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
+                                    Read More
+                                </NavLink>
                             </motion.div>
                         </div>
 
@@ -165,6 +190,8 @@ const HomePage = () => {
                 <WhyChooseUs />
 
                 <EventsNews />
+
+
 
             </div >
         </>
