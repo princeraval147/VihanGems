@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
 import { motion } from 'framer-motion';
 
-
-// const GlobalPresenceMap = React.lazy(() => import('./GlobalPresenceMap'));
-
-
 const geoUrl = 'https://unpkg.com/world-atlas@2.0.2/countries-50m.json';
 
 const highlightedCountries = ['IN', 'US', 'BE', 'AE', 'HK'];
@@ -26,7 +22,7 @@ const GlobalPresenceMap = () => {
 
 
     return (
-        <section className="bg-[#0f172a] text-white py-20 ">
+        <section className="bg-[#0f172a] text-white ">
             <h2 className="text-center text-4xl font-bold">Our Global Presence</h2>
 
             {/* <div className="max-w-6xl mx-auto relative"> */}
@@ -70,11 +66,11 @@ const GlobalPresenceMap = () => {
                             }}
                             onClick={(e) => {
                                 if (isMobile) {
-                                    const rect = e.target.getBoundingClientRect();
+                                    const touch = e.nativeEvent?.touches?.[0] || e;
                                     setTooltip({
                                         ...country,
-                                        x: rect.left + rect.width / 2,
-                                        y: rect.top + window.scrollY,
+                                        x: touch.clientX,
+                                        y: touch.clientY + window.scrollY, // include scroll
                                     });
                                 }
                             }}
@@ -100,10 +96,6 @@ const GlobalPresenceMap = () => {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        // style={{
-                        //     left: tooltip.x + 15,
-                        //     top: tooltip.y - 30
-                        // }}
                         style={{
                             left: Math.min(tooltip.x + 15, window.innerWidth - 200),
                             top: Math.max(tooltip.y - 30, 10)
