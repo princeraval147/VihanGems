@@ -7,7 +7,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
     return (
-        <footer className="bg-gradient-to-tr from-[#1b1d38] to-[#26295a] text-white pt-12 pb-8">
+        <footer className="bg-gradient-to-tr from-[#111320] to-[#1f2345] text-white pt-12 pb-8">
             {/* <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"> */}
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
