@@ -27,9 +27,10 @@ const GlobalPresenceMap = () => {
         <section className="bg-[#0f172a] text-white py-20 ">
             <h2 className="text-center text-4xl font-bold">Our Global Presence</h2>
 
-            <div className="max-w-6xl mx-auto relative">
-                <ComposableMap projectionConfig={{ scale: 150 }} className="w-full h-auto">
-
+            {/* <div className="max-w-6xl mx-auto relative"> */}
+            <div className="w-full px-4 md:px-8 lg:px-16 relative">
+                {/* <ComposableMap projectionConfig={{ scale: 150 }} className="w-full h-auto"> */}
+                <ComposableMap projectionConfig={{ scale: window.innerWidth < 768 ? 200 : 150 }} className="w-full h-auto" >
                     {/* Parses and renders countries from the geoUrl API */}
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
@@ -84,15 +85,28 @@ const GlobalPresenceMap = () => {
                             left: Math.min(tooltip.x + 15, window.innerWidth - 150), // prevent overflow
                             top: tooltip.y - 30
                         }}
+                        onClick={(e) => {
+                            // For mobile
+                            setTooltip({ ...country, x: e.clientX, y: e.clientY });
+                        }}
+                        onMouseEnter={(e) => {
+                            setTooltip({ ...country, x: e.clientX, y: e.clientY });
+                        }}
+                        onMouseLeave={() => {
+                            if (window.innerWidth >= 768) setTooltip(null); // don't auto-hide on mobile
+                        }}
 
                     >
                         <p className="font-semibold">{tooltip.name}</p>
                         <p className="text-sm text-gray-600">{tooltip.note}</p>
+                        {window.innerWidth < 768 && (
+                            <button onClick={() => setTooltip(null)} className="mt-2 text-xs text-blue-600 underline">Close</button>
+                        )}
                     </motion.div>
                 )}
 
             </div>
-        </section>
+        </section >
     );
 };
 
