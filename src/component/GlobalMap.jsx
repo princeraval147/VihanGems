@@ -22,6 +22,8 @@ const exportCountries = [
 const GlobalPresenceMap = () => {
 
     const [tooltip, setTooltip] = useState(null);
+    const isMobile = window.innerWidth < 768;
+
 
     return (
         <section className="bg-[#0f172a] text-white py-20 ">
@@ -42,7 +44,11 @@ const GlobalPresenceMap = () => {
                                     // fill="#1e293b"
                                     fill={highlightedCountries.includes(geo.properties.ISO_A2) ? "#facc15" : "#1e293b"}
                                     stroke="#334155"
-                                    style={{ default: { outline: 'none' }, hover: { fill: '#334155' } }}
+                                    style={{
+                                        default: { outline: 'none', pointerEvents: 'none' },
+                                        hover: { fill: '#334155' },
+                                        pressed: { pointerEvents: 'none' }
+                                    }}
                                 />
                             ))
                         }
@@ -53,18 +59,35 @@ const GlobalPresenceMap = () => {
                             key={i}
                             coordinates={country.coordinates}
                             onMouseEnter={(e) => {
-                                setTooltip({ ...country, x: e.clientX, y: e.clientY });
+                                if (!isMobile) {
+                                    setTooltip({ ...country, x: e.clientX, y: e.clientY });
+                                }
                             }}
-                            onMouseLeave={() => setTooltip(null)}
+                            onMouseLeave={() => {
+                                if (!isMobile) {
+                                    setTooltip(null);
+                                }
+                            }}
+                            onClick={(e) => {
+                                if (isMobile) {
+                                    const rect = e.target.getBoundingClientRect();
+                                    setTooltip({
+                                        ...country,
+                                        x: rect.left + rect.width / 2,
+                                        y: rect.top + window.scrollY,
+                                    });
+                                }
+                            }}
                         >
                             <motion.circle
-                                r={6}
+                                r={isMobile ? 15 : 6}
                                 fill="#eab308"
                                 stroke="#fff"
                                 strokeWidth={1.5}
                                 initial={{ scale: 0 }}
                                 animate={{ scale: 1 }}
                                 transition={{ duration: 0.3 }}
+                                style={{ cursor: "pointer" }}
                             />
                             {/* <circle r={6} fill="#eab308" stroke="#fff" strokeWidth={1.5} /> */}
                         </Marker>
@@ -82,26 +105,12 @@ const GlobalPresenceMap = () => {
                         //     top: tooltip.y - 30
                         // }}
                         style={{
-                            left: Math.min(tooltip.x + 15, window.innerWidth - 150), // prevent overflow
-                            top: tooltip.y - 30
+                            left: Math.min(tooltip.x + 15, window.innerWidth - 200),
+                            top: Math.max(tooltip.y - 30, 10)
                         }}
-                        onClick={(e) => {
-                            // For mobile
-                            setTooltip({ ...country, x: e.clientX, y: e.clientY });
-                        }}
-                        onMouseEnter={(e) => {
-                            setTooltip({ ...country, x: e.clientX, y: e.clientY });
-                        }}
-                        onMouseLeave={() => {
-                            if (window.innerWidth >= 768) setTooltip(null); // don't auto-hide on mobile
-                        }}
-
                     >
                         <p className="font-semibold">{tooltip.name}</p>
                         <p className="text-sm text-gray-600">{tooltip.note}</p>
-                        {window.innerWidth < 768 && (
-                            <button onClick={() => setTooltip(null)} className="mt-2 text-xs text-blue-600 underline">Close</button>
-                        )}
                     </motion.div>
                 )}
 
