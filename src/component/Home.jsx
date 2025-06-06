@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NavLink, useLocation } from 'react-router-dom';
 import ContactUs from "./ContactUs";
@@ -7,6 +7,8 @@ import Marquee from 'react-fast-marquee';
 import HeroSection from "./HeroSection";
 import WhyChooseUs from "./WhyChooseUs";
 import EventsNews from "./EventNews";
+// import GlobalPresenceMap from "./GlobalMap";
+const GlobalPresenceMap = React.lazy(() => import('./GlobalMap'));
 
 const HomePage = () => {
 
@@ -63,8 +65,6 @@ const HomePage = () => {
                 <HeroSection />
 
                 {/* Craftsmanship Section */}
-
-
                 <section id="products" className="relative bg-gradient-to-r from-[#1a1f38] to-[#2e2f70] text-white py-20 px-6 overflow-hidden">
                     {/* Decorative Background Element */}
                     <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[url('/grid.svg')] bg-cover" />
@@ -162,7 +162,10 @@ const HomePage = () => {
                 <WhyChooseUs />
                 <EventsNews />
 
-
+                {/* <GlobalPresenceMap /> */}
+                <Suspense fallback={<div>Loading map...</div>}>
+                    <GlobalPresenceMap />
+                </Suspense>
 
 
 
