@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SparkleParticles from "./SparkleParticles";
 import { WhatsAppButton } from "./WhatsAppButton";
 
@@ -39,6 +39,12 @@ const diamondProducts = [
 ];
 
 const DiamondGallery = () => {
+
+    useEffect(() => {
+        document.title = "Vihan Gems | Diamond Gallery";
+    }, []);
+
+
     const [selected, setSelected] = useState(null);
 
     return (
