@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import SparkleParticles from "./SparkleParticles";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 const diamondProducts = [
     {
@@ -45,6 +46,8 @@ const DiamondGallery = () => {
             <div className="fixed inset-0 z-0 pointer-events-none">
                 <SparkleParticles />
             </div>
+
+            <WhatsAppButton />
 
             <div className="bg-gradient-to-b from-[#0F172A] to-[#1E293B] py-20 px-6 text-white">
                 <h2 className="text-center text-4xl font-bold mb-12">Diamond Product Gallery</h2>
@@ -108,6 +111,7 @@ const DiamondGallery = () => {
                     </motion.div>
                 )}
             </div>
+
         </>
     );
 }
