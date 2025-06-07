@@ -59,34 +59,20 @@ const HomePage = () => {
             {/* <div className="min-h-screen bg-gradient-to-br from-[#000000] via-[#0f172a] to-[#1e40af] text-white font-sans overflow-x-hidden"> */}
             {/* <div className="min-h-screen bg-gradient-to-br from-[#0F172A] to-[#F8FAFC] text-[#F8FAFC] font-sans overflow-x-hidden"> */}
             {/* <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1E3A8A] to-[#F8FAFC] text-white font-sans overflow-x-hidden"> */}
-            <div id="home" className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden">
+
+            {/* <div style={{ fontFamily: "Playfair Display" }} id="home" className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden"> */}
+            {/* <div className="absolute inset-0 bg-black/50 z-0" /> */}
+
+            <div style={{ fontFamily: "Playfair Display" }} id="home" className="min-h-screen bg-gradient-to-br from-[#0F172A] to-[#1e2a38] text-white font-sans overflow-x-hidden">
 
                 <WhatsAppButton />
                 <HeroSection />
 
-                {/* Craftsmanship Section */}
-                <section id="products" className="relative bg-gradient-to-r from-[#1a1f38] to-[#2e2f70] text-white py-20 px-6 overflow-hidden">
+                <section id="products" className="relative text-white py-20 px-6 overflow-hidden">
                     {/* Decorative Background Element */}
-                    <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[url('/grid.svg')] bg-cover" />
 
                     <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12 relative z-10">
-                        {/* Diamond Video Grid */}
-                        {/* <div className="grid grid-cols-2 gap-4">
-                            {[1, 2, 3, 4].map((i) => (
-                                <motion.video
-                                    key={i}
-                                    src={`/Img/diamond_${i}.mp4`} // Place videos here
-                                    alt="Video Don't support"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    whileHover={{ scale: 1.05 }}
-                                    className="rounded-xl shadow-xl border border-white/10"
-                                />
-                            ))}
-                        </div> */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4 max-w-5xl mx-auto">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 max-w-5xl mx-auto">
                             {[1, 2, 3, 4].map((i) => (
                                 <motion.div
                                     key={i}
@@ -102,18 +88,6 @@ const HomePage = () => {
                             ))}
                         </div>
 
-
-                        {/* <div className="grid grid-cols-2 gap-4">
-                            {[1, 2, 3, 4].map((i) => (
-                                <motion.img               // changed from <motion.video>
-                                    key={i}
-                                    src={`/Img/diamond_${i}.jpg`}  // changed extension
-                                    alt={`Diamond frame ${i}`}
-                                    whileHover={{ scale: 1.05 }}
-                                    className="w-94 h-64 rounded-xl shadow-xl border border-white/10"
-                                />
-                            ))}
-                        </div> */}
                         <div>
                             <motion.div
                                 initial={{ opacity: 0, x: 40 }}
@@ -121,7 +95,7 @@ const HomePage = () => {
                                 transition={{ duration: 0.8 }}
                             >
                                 <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                    Why Choose <span className="text-purple-400">Vihan Gems</span> ?
+                                    About <span className="text-purple-400">Vihan Gems</span> Diamond
                                 </h2>
                                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                                     At Vihan Gems, we blend innovation and sustainability to craft breathtaking diamonds. Our lab-grown gems
@@ -140,7 +114,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Animation  */}
-                <div className="bg-white py-8 bg-gradient-to-r from-[#1a1f38] to-[#2e2f70]">
+                <div className="py-8">
                     <h1 className="text-center font-bold text-2xl sm:text-3xl text-white mb-5">Origins</h1>
                     <Marquee speed={50} gradient={false} pauseOnHover={true}>
                         {logos.map((logo, index) => (
@@ -158,8 +132,9 @@ const HomePage = () => {
                     </Marquee>
                 </div>
 
-
                 <WhyChooseUs />
+
+
                 <EventsNews />
 
                 {/* <GlobalPresenceMap /> */}

@@ -10,9 +10,6 @@ export default function HeroSection() {
                 <SparkleParticles />
             </div>
             <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
-                {/* Background overlay */}
-                <div className="absolute inset-0 bg-black/50 z-0" />
-
                 {/* Content */}
                 <motion.div
                     className="relative z-20 max-w-3xl text-center"
@@ -46,13 +43,14 @@ export default function HeroSection() {
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.9 }}
                     >
-                        <button
+                        <NavLink
+                            to='/diamond-gallery'
                             className="px-8 py-3 rounded-full border-2 border-white text-white uppercase tracking-wide font-semibold 
                        hover:border-blue-500 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 
                        transition-colors duration-300 cursor-pointer shadow-md"
                         >
                             View Collection
-                        </button>
+                        </NavLink>
 
                         <NavLink
                             to='/about'
