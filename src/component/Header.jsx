@@ -2,13 +2,12 @@ import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const { scrollY } = useScroll();
-    const location = useLocation();
 
     // Close mobile menu when navigating
     const closeMenu = () => setIsOpen(false);
@@ -37,7 +36,8 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <NavLink to="/" onClick={closeMenu}>
-                    <img src="/logo-white.png" alt="Vihan Gems" className="h-10" />
+                    {/* <img src="/logo-white.png" alt="Vihan Gems" className="h-10" /> */}
+                    <h3 className="text-white">Vihan Gems</h3>
                 </NavLink>
 
                 {/* Desktop Nav */}

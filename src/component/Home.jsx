@@ -98,8 +98,12 @@ const HomePage = () => {
                                     About <span className="text-purple-400">Vihan Gems</span> Diamond
                                 </h2>
                                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                                    At Vihan Gems, we blend innovation and sustainability to craft breathtaking diamonds. Our lab-grown gems
-                                    reflect ethical precision and timeless beauty—perfected with advanced tech and zero compromise on quality.
+                                    Vihan Gems specializes in crafting certified, high-quality lab-grown diamonds using advanced
+                                    technology and sustainable practices. As a leading manufacturer, we offer a wide range of Lab Grown Diamonds
+                                    in various shapes, sizes, and clarities—perfectly suited for your unique designs. With precision cutting and
+                                    in-house expertise, we ensure brilliance, consistency, and exceptional value. source the finest lab-created diamonds
+                                    directly from the experts.
+
                                 </p>
                                 <NavLink to='/diamond-gallery' className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
                                     Read More
