@@ -22,13 +22,13 @@ const GlobalPresenceMap = () => {
 
 
     return (
-        <section className="bg-[#0f172a] text-white ">
+        <section className="bg-[#0f172a] text-white">
             <h2 className="text-center text-4xl font-bold">Our Global Presence</h2>
 
             {/* <div className="max-w-6xl mx-auto relative"> */}
-            <div className="w-full px-4 md:px-8 lg:px-16 relative">
+            <div className="w-full md:px-8 lg:px-16 relative">
                 {/* <ComposableMap projectionConfig={{ scale: 150 }} className="w-full h-auto"> */}
-                <ComposableMap projectionConfig={{ scale: window.innerWidth < 768 ? 200 : 150 }} className="w-full h-auto" >
+                <ComposableMap projectionConfig={{ scale: window.innerWidth < 768 ? 200 : 190 }} className="w-full h-auto" >
                     {/* Parses and renders countries from the geoUrl API */}
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>
