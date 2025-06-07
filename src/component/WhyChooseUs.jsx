@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 
 const stats = [
     { value: 10000, label: "Carats Sold", suffix: "+" },
@@ -15,18 +15,22 @@ const AnimatedCounter = ({ target, suffix }) => {
     });
 
     const [display, setDisplay] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
-        base.set(target);
-        const unsubscribe = smooth.on("change", (latest) => {
-            setDisplay(Math.floor(latest));
-        });
+        if (isInView) {
+            base.set(target);
+            const unsubscribe = smooth.on("change", (latest) => {
+                setDisplay(Math.floor(latest));
+            });
 
-        return () => unsubscribe();
-    }, [target]);
+            return () => unsubscribe();
+        }
+    }, [isInView, target]);
 
     return (
-        <span className="text-4xl font-bold text-white">
+        <span ref={ref} className="text-4xl font-bold text-white">
             {display.toLocaleString()}
             {suffix}
         </span>
@@ -35,13 +39,14 @@ const AnimatedCounter = ({ target, suffix }) => {
 
 const WhyChooseUs = () => {
     return (
-        <section className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] py-20 text-center text-white" id="why-choose-us">
+        <section className="py-20 text-center text-white" id="why-choose-us">
             <motion.h2
                 className="text-3xl md:text-4xl font-bold mb-10"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                // viewport={{ once: false }}
+                viewport={{ once: false, amount: 0.5 }} // 👈 important: once: false
             >
                 Why Choose Vihan Gems
             </motion.h2>
