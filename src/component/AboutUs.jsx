@@ -107,7 +107,8 @@ export default function AboutUsPage() {
 
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden px-6 py-20">
+        // <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden px-6 py-20">
+        <div className="min-h-screen  bg-gradient-to-br from-[#0F172A] to-[#1e2a38] text-white font-sans overflow-x-hidden px-6 py-20">
 
             <motion.div
                 initial={{ opacity: 0 }}
