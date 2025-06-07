@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 const ContactUs = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6 py-20 font-sans">
+        // <div className="min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6 py-20 font-sans">
+        <div className="min-h-screen text-white px-6 py-20 font-sans">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
