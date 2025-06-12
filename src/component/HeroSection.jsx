@@ -9,7 +9,25 @@ export default function HeroSection() {
             <div className="absolute inset-0 z-10 pointer-events-none">
                 <SparkleParticles />
             </div>
-            <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 lg:px-8">
+
+            {/* Background Video */}
+            <video
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                autoPlay
+                loop
+                muted
+                playsInline
+            >
+                <source src="/videos/CompanyVideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/95 via-[#0e0f1d]/80 to-transparent" />
+            {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/95 via-[#0e0f1d]/90 to-[#0e0f1d]/60 sm:to-transparent" /> */}
+            {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/90 via-[#0e0f1d]/70 to-transparent" /> */}
+
+            <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden px-4 sm:px-6 lg:px-8 z-30">
                 {/* Content */}
                 <motion.div
                     className="relative z-20 max-w-3xl text-center"
@@ -24,7 +42,8 @@ export default function HeroSection() {
                         transition={{ delay: 0.3 }}
                     >
                         Timeless Brilliance by{" "}
-                        <span className="text-blue-400">Vihan Gems</span>
+                        {/* <span className="text-blue-400">Vihan Gems</span> */}
+                        <span className="drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]">Vihan Gems</span>
                     </motion.h1>
 
                     <motion.p
