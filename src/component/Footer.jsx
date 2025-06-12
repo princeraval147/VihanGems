@@ -58,7 +58,7 @@ const Footer = () => {
                             Email: <a href="mailto:info@vihangems.com" target='_blank' className="hover:text-gray-300">info@vihangems.com</a>
                         </li>
                         <li>
-                            Phone: <a href="tel:+919999999999" className="hover:text-gray-300">+91 99999 99999</a>
+                            Phone: <a href="tel:+919879820993" className="hover:text-gray-300">+91 98798 20993</a>
                         </li>
                         <li>Customer Support: 10am - 7pm IST</li>
                     </ul>
