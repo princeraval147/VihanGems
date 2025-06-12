@@ -34,10 +34,20 @@ const Header = () => {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                {/* Logo */}
                 <NavLink to="/" onClick={closeMenu}>
-                    {/* <img src="/logo-white.png" alt="Vihan Gems" className="h-10" /> */}
-                    <h3 className="text-white">Vihan Gems</h3>
+                    <img
+                        src="Images/CropLogo.png"
+                        alt="Vihan Gems"
+                        className="h-14 md:h-20 object-contain"
+                        // style={{ aspectRatio: "auto", padding: 0, margin: 0 }}
+                        style={{
+                            objectFit: "contain",
+                            objectPosition: "left",
+                            maxHeight: "100%",
+                            padding: 0,
+                            margin: 0,
+                        }}
+                    />
                 </NavLink>
 
                 {/* Desktop Nav */}
