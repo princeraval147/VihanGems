@@ -84,7 +84,7 @@ export default function HeroSection() {
                 </motion.div>
             </div>
 
-            <section className="py-20 px-6 md:px-16">
+            {/* <section className="py-20 px-6 md:px-16">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ export default function HeroSection() {
                         </div>
                     </div>
                 </motion.div>
-            </section>
+            </section> */}
         </>
     );
 }
