@@ -9,8 +9,53 @@ import WhyChooseUs from "./WhyChooseUs";
 import EventDetail from "./EventDetail";
 // import GlobalPresenceMap from "./GlobalMap";
 const GlobalPresenceMap = React.lazy(() => import('./GlobalMap'));
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import { GiDiamondHard, GiMineTruck, GiCutDiamond } from 'react-icons/gi';
+import { MdLocalShipping, MdCheckCircle } from 'react-icons/md';
 
 const HomePage = () => {
+
+    const timelineItems = [
+        {
+            title: 'Mining the Rough Diamond',
+            date: 'Step 1',
+            description: 'Sustainably sourced from ethical mines with full traceability.',
+            icon: <GiMineTruck />,
+            bgColor: '#1e3a8a',
+        },
+        {
+            title: 'Cutting & Polishing',
+            date: 'Step 2',
+            description: 'Master artisans shape and polish each diamond to perfection.',
+            icon: <GiCutDiamond />,
+            bgColor: '#1e40af',
+        },
+        {
+            title: 'Grading & Certification',
+            date: 'Step 3',
+            description: 'Certified by trusted labs like GIA, IGI, and HRD.',
+            icon: <GiDiamondHard />,
+            bgColor: '#3b82f6',
+        },
+        {
+            title: 'Global Logistics',
+            date: 'Step 4',
+            description: 'Secure transport through vetted global supply chains.',
+            icon: <MdLocalShipping />,
+            bgColor: '#0ea5e9',
+        },
+        {
+            title: 'Delivered to Client',
+            date: 'Step 5',
+            description: 'Arrives in premium packaging with lifetime authenticity.',
+            icon: <MdCheckCircle />,
+            bgColor: '#10b981',
+        },
+    ];
+
 
 
     const location = useLocation();
@@ -47,6 +92,28 @@ const HomePage = () => {
 
                 <WhatsAppButton />
                 <HeroSection />
+
+                {/* Diamond Journey  */}
+                <h2 className="text-4xl font-bold text-center mt-24 mb-12">The Journey of a Diamond</h2>
+                <VerticalTimeline lineColor="#1e40af">
+                    {timelineItems.map((item, idx) => (
+                        <VerticalTimelineElement
+                            key={idx}
+                            className="vertical-timeline-element--work"
+                            contentStyle={{ background: item.bgColor, color: '#fff' }}
+                            contentArrowStyle={{ borderRight: '7px solid  #1e3a8a' }}
+                            date={item.date}
+                            iconStyle={{ background: item.bgColor, color: '#fff' }}
+                            icon={item.icon}
+                        >
+                            <h3 className="vertical-timeline-element-title text-xl font-semibold">{item.title}</h3>
+                            <p>{item.description}</p>
+                        </VerticalTimelineElement>
+                    ))}
+                </VerticalTimeline>
+
+                <div className="my-16 border-t border-white/10" />
+
 
 
 
