@@ -6,11 +6,12 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import Marquee from 'react-fast-marquee';
 import HeroSection from "./HeroSection";
 import WhyChooseUs from "./WhyChooseUs";
-import EventsNews from "./EventNews";
+import EventDetail from "./EventDetail";
 // import GlobalPresenceMap from "./GlobalMap";
 const GlobalPresenceMap = React.lazy(() => import('./GlobalMap'));
 
 const HomePage = () => {
+
 
     const location = useLocation();
     useEffect(() => {
@@ -24,31 +25,10 @@ const HomePage = () => {
 
 
     useEffect(() => {
-        document.title = "Vihan Gems | Build With Trust";
+        document.title = "Vihan Gems | Build on Trust";
     }, []);
 
-    const logos = [
-        '/Img/GIA.png',
-        '/Img/DIA.png',
-        '/Img/GJE.png',
-        '/Img/GLOBAL.png',
-        '/Img/WDC.png',
-        '/Img/FP.png',
-        '/Img/BDB.png',
-    ];
 
-    const blogs = [
-        {
-            title: "Top 5 Benefits of Lab-Grown Diamonds",
-            date: "June 2025",
-            excerpt: "Discover why lab-grown diamonds are redefining the jewelry industry...",
-        },
-        {
-            title: "Diamond Shapes & What They Say About You",
-            date: "May 2025",
-            excerpt: "Explore the personality behind each popular diamond shape...",
-        },
-    ];
 
 
     return (
@@ -67,6 +47,8 @@ const HomePage = () => {
 
                 <WhatsAppButton />
                 <HeroSection />
+
+
 
                 <section id="products" className="relative text-white py-20 px-6 overflow-hidden">
                     {/* Decorative Background Element */}
@@ -106,7 +88,7 @@ const HomePage = () => {
 
                                 </p>
                                 <NavLink to='/diamond-gallery' className="mt-4 px-6 py-3 border border-purple-400 text-purple-300 hover:border-white hover:text-white rounded-lg transition duration-300 bg-transparent">
-                                    Read More
+                                    View More
                                 </NavLink>
                             </motion.div>
                         </div>
@@ -118,7 +100,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Animation  */}
-                <div className="py-8">
+                {/* <div className="py-8">
                     <h1 className="text-center font-bold text-2xl sm:text-3xl text-white mb-5">Origins</h1>
                     <Marquee speed={50} gradient={false} pauseOnHover={true}>
                         {logos.map((logo, index) => (
@@ -134,12 +116,13 @@ const HomePage = () => {
                             </div>
                         ))}
                     </Marquee>
-                </div>
+                </div> */}
 
                 <WhyChooseUs />
 
 
-                <EventsNews />
+                {/* <EventsNews /> */}
+                <EventDetail />
 
                 {/* <GlobalPresenceMap /> */}
                 <Suspense fallback={<div>Loading map...</div>}>
