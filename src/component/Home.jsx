@@ -131,12 +131,11 @@ const HomePage = () => {
                                     <img
                                         src={`/Img/diamond_${i}.jpg`}
                                         alt={`Diamond frame ${i}`}
-                                        className="w-full h-44 object-cover"
+                                        className="w-44 object-cover"
                                     />
                                 </motion.div>
                             ))}
                         </div>
-
                         <div>
                             <motion.div
                                 initial={{ opacity: 0, x: 40 }}
