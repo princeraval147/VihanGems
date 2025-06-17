@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Eye, Target } from "lucide-react"; // Or use your own SVGs or image icons
 import 'react-vertical-timeline-component/style.min.css';
 import SparkleParticles from './SparkleParticles';
+import { WhatsAppButton } from './WhatsAppButton';
 
 export default function AboutUsPage() {
 
@@ -69,7 +70,7 @@ export default function AboutUsPage() {
         <>
             {/* // <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden px-6 py-20"> */}
             <div className="min-h-screen  bg-gradient-to-br from-[#0F172A] to-[#1e2a38] text-white font-sans overflow-x-hidden px-6 py-20">
-
+                <WhatsAppButton />
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -123,21 +124,26 @@ export default function AboutUsPage() {
                         viewport={{ once: true }}
                     >
                         <p>
-                            Founded in 2018, <span className="text-white font-semibold">Vihan Gems</span> has grown into a global leader in Lab color diamonds. We
-                            specialize in crafting and sourcing some of the rarest and most vibrant gems on the market—including vivid
-                            yellows, elegant pinks, intense blues, and our signature ultra-rare red diamonds.
+                            Established in 2018,  <strong>Vihan Gems</strong> is one of the largest manufacturers and global
+                            leaders in Lab color diamonds, with a unique specialty.
+                        </p>
+                        <p>
+                            Founded in 2018, Vihan Gems has grown to become one of the world’s leading manufacturers
+                            and suppliers of Lab color diamonds. With a commitment to excellence and innovation,
+                            we specialize in crafting and sourcing some of the most vibrant and rare diamonds on the
+                            market—ranging from vivid yellows and elegant pinks to intense blues and greens.
+                            with a unique specialty: the ultra-rare and captivating Red diamonds.
+                        </p>
+                        <p>
+                            As one of the largest manufacturers in the industry, we combine state-of-the-art technology
+                            with skilled craftsmanship to ensure each diamond meets the highest standards of beauty and
+                            quality. Our diamonds are ethically sourced, IGI & GIA certified, and tailored to meet the
+                            unique needs of jewelers, collectors, and luxury buyers worldwide.
+                        </p>
+                        <p>
+                            At Vihan Gems, we don’t just sell diamonds—we bring color, passion, and timeless elegance to life.
                         </p>
 
-                        <p>
-                            Our advanced technology, coupled with expert craftsmanship, ensures that every stone meets the highest
-                            standards of beauty and quality. As one of the largest manufacturers in the industry, our diamonds are ethically
-                            sourced, IGI & GIA certified, and tailored to the unique needs of jewelers, collectors, and luxury clients worldwide.
-                        </p>
-
-                        <p>
-                            At Vihan Gems, we don’t just sell diamonds—we bring color, passion, and timeless elegance to life. With a
-                            commitment to sustainability, integrity, and innovation, we’re redefining what it means to shine.
-                        </p>
                     </motion.div>
                 </section>
 
@@ -166,11 +172,10 @@ export default function AboutUsPage() {
                             </div>
                             <h3 className="text-2xl font-semibold text-white text-center mb-2">Vision</h3>
                             <p className="text-gray-300 text-center leading-relaxed">
-                                To be the world’s leading name in Lab color diamonds, celebrated for our commitment to excellence, ethical sourcing,
-                                and unmatched craftsmanship.
-                                We strive to bring the rare beauty of colored diamonds—from radiant yellows and elegant pinks to the exceptionally
-                                rare reds and blues—to the global stage. Our vision is to inspire timeless elegance and lasting value
-                                through every gem we create, serving jewelers, collectors, and luxury clients worldwide with integrity and innovation.
+                                To be the world’s leading name in Lab color diamonds, celebrated for our commitment to excellence, ethical sourcing, and unmatched craftsmanship.
+                            </p>
+                            <p className="text-gray-300 text-center leading-relaxed">
+                                We strive to bring the rare beauty of colored diamonds—from radiant yellows and elegant pinks to the exceptionally rare reds and blues—to the global stage. Our vision is to inspire timeless elegance and lasting value through every gem we create, serving jewelers, collectors, and luxury clients worldwide with integrity and innovation.
                             </p>
                         </motion.div>
 
@@ -186,14 +191,26 @@ export default function AboutUsPage() {
                             </div>
                             <h3 className="text-2xl font-semibold text-white text-center mb-2">Mission</h3>
                             <p className="text-gray-300 text-center leading-relaxed">
-                                Our mission is to source, manufacture, and deliver the finest Lab color diamonds with integrity, precision, and passion.
-                                We are committed to:
-                                Offering a diverse spectrum of certified color diamonds, including rare reds, vibrant yellows, elegant pinks, and deep blues.
-                                Maintaining the highest standards of ethical sourcing, transparency, and environmental responsibility.
-                                Supporting our global clients—from jewelers to collectors—with exceptional quality, competitive pricing,
-                                and personalized service.
-                                Innovating in diamond cutting and design to enhance the natural brilliance and uniqueness of every stone we offer.
+                                Our mission is to source, manufacture, and deliver the finest Lab color diamonds with integrity, precision, and passion. We are committed to:
                             </p>
+                            <ul className="text-gray-300 list-disc list-inside mt-4">
+                                <li>
+                                    Offering a diverse spectrum of certified color diamonds, including rare reds, vibrant yellows,
+                                    elegant pinks, and deep blues.
+                                </li>
+                                <li>
+                                    Maintaining the highest standards of ethical sourcing, transparency, and environmental
+                                    responsibility.
+                                </li>
+                                <li>
+                                    Supporting our global clients—from jewelers to collectors—with exceptional quality,
+                                    competitive pricing, and personalized service.
+                                </li>
+                                <li>
+                                    Innovating in diamond cutting and design to enhance the natural brilliance and uniqueness
+                                    of every stone we offer.
+                                </li>
+                            </ul>
                         </motion.div>
                     </div>
                 </section>
