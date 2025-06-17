@@ -3,8 +3,8 @@ import { motion, useMotionValue, useSpring, useInView } from "framer-motion";
 
 const stats = [
     { value: 10000, label: "Carats Sold", suffix: "+" },
-    { value: 25, label: "Global Clients", suffix: "+" },
-    { value: 24, label: "Hour Response Guarantee", suffix: "h" },
+    { value: 150, label: "Global Clients", suffix: "+" },
+    { value: 1000, label: "Happy Clients Served", suffix: "+" },
 ];
 
 const AnimatedCounter = ({ target, suffix }) => {
