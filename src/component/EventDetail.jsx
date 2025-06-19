@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const events = [
     {
-        title: "Vihan Gems at Dubai Diamond Expo 2024",
-        date: "May 12, 2024",
+        title: "Vihan Gems at Asia World Expo",
+        date: "2-6 March, 2025",
         location: "Hong Kong",
         description:
             "We showcased our latest sustainable diamond collections and connected with over 100+ clients worldwide.",
