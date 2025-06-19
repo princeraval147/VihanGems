@@ -85,7 +85,7 @@ const Footer = () => {
                         Vihan Gems Pvt. Ltd.<br />
                         {/*1st Floor, Solitaire Plaza,<br />
                         BKC Road, Surat, India - 400051 */}
-                        1st Floor Shankar Building, <br />
+                        1st Floor Sankalp Building, <br />
                         Beside Gopal Locho, <br />
                         Mahidharpura, Surat, India - 395003
                     </p>
