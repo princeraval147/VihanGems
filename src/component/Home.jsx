@@ -20,7 +20,7 @@ const HomePage = () => {
 
     const timelineItems = [
         {
-            title: 'Mining the Rough Diamond',
+            title: 'Growing the Rough Diamond',
             date: 'Step 1',
             description: 'Sustainably sourced from ethical mines with full traceability.',
             icon: <GiMineTruck />,
