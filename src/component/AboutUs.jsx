@@ -33,36 +33,6 @@ export default function AboutUsPage() {
             image: "/Img/HRD.png",
             link: "https://hrdantwerp.com/"
         },
-        // {
-        //     title: "iTraceit",
-        //     desc: "iTraceiT maintains and provides blockchain and QR-code-based software solutions. These cutting-edge tools enable us to track and trace the journey of our diamonds through every step of the supply chain, from the source to the end consumer. This advanced technology guarantees the authenticity, quality, and provenance of our diamonds.",
-        //     image: "/Img/iTRACE.png",
-        //     link: "https://itraceit.io/"
-        // },
-        // {
-        //     title: "Tracr",
-        //     desc: "Tracr utilises several technologies to generate an exclusive, tamper-proof digital fingerprint for individual diamonds. This enables comprehensive diamond tracing, from its origin to every stage of manufacturing, until it reaches the end-consumer. Each step of the process is meticulously recorded, ensuring complete transparency throughout the journey.",
-        //     image: "/Img/TRA.png",
-        //     link: "https://www.tracr.com/"
-        // },
-        // {
-        //     title: "Natural Diamond Council",
-        //     desc: "We promote the exceptional qualities of natural diamonds by joining forces with the Natural Diamond Council. We aim to amplify the positive impact of natural diamonds throughout the value chain. Through these efforts, our customers will gain a deeper understanding of the ethical sourcing practices, social responsibility initiatives, and environmental stewardship associated with natural diamonds.",
-        //     image: "/Img/NDC.png",
-        //     link: "https://www.naturaldiamonds.com/in/"
-        // },
-        // {
-        //     title: "FOREVERMARK",
-        //     desc: "De Beers Forevermark grading certificates from De Beers Group industry Services provide more in-depth information on the diamond's cut, clarity, color, and caratage. The information on a De Beers Forevermark grading certificate is evaluated using world-class proprietary diamond processes and technology in the De Beers Group Institute of Diamonds in Belgium, UK, or India.",
-        //     image: "/Img/FOREVER.png",
-        //     link: "https://www.forevermark.com/en-in/"
-        // },
-        // {
-        //     title: "CANADA MARK",
-        //     desc: "CANADAMARK, an origin hallmark, represents diamonds genuinely mined in Canada's North Western territories. It ensures that the diamonds are authentic, fully trusted, and can be traced back to their source. By guaranteeing the integrity of the supply chain, CANADAMARK provides consumers with confidence in the origin and history of their polished diamonds.",
-        //     image: "/Img/CANADA.png",
-        //     link: "https://canadamark.com/"
-        // },
     ];
 
 
@@ -82,9 +52,9 @@ export default function AboutUsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                         {[
                             { name: "Bhavin Shah", role: "Founder & Director", img: "Images/BhavinShah.jpg" },
-                            { name: "Anil Gopani", role: "Head Of Manufacturing", img: "Images/AnilGopani.jpg" },
-                            { name: "Divy Shah", role: "Head Of Global Sales", img: "Images/DivyShah.jpg" },
                             { name: "Hitesh Gopani", role: "Head Of Purchase Rough Diamonds", img: "Images/hitesh.jpg" },
+                            { name: "Anil Gopani", role: "Head Of Manufacturing", img: "Images/AnilGopani.jpg" },
+                            { name: "Divy Shah", role: "Head Of Global Sales", img: "Images/Divy.jpg" },
                         ].map((member, index) => (
                             <motion.div
                                 key={index}
