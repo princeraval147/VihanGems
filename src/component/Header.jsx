@@ -18,7 +18,7 @@ const Header = () => {
     });
 
     const navLinks = [
-        { name: "Home", to: "/" },
+        { name: "Home", to: "/#home" },
         { name: "About", to: "/about" },
         { name: "Products", to: "/diamond-gallery" },
         { name: "Contact", to: "/#contact" },
@@ -36,7 +36,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <NavLink to="/" onClick={closeMenu}>
                     <img
-                        src="Images/CropLogo.png"
+                        src="Images/VihanGems.png"
                         alt="Vihan Gems"
                         className="h-14 md:h-20 object-contain"
                         // style={{ aspectRatio: "auto", padding: 0, margin: 0 }}
