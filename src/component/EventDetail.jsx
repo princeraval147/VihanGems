@@ -7,7 +7,7 @@ const events = [
         date: "2-6 March, 2025",
         location: "Hong Kong",
         description:
-            "We showcased our latest sustainable diamond collections and connected with over 100+ clients worldwide.",
+            "We showcased our latest sustainable diamond collections and connected with over 150+ clients worldwide.",
         media: [
             { type: "image", url: "/Images/Events/AsiaExpo3.jpg" },
             { type: "image", url: "/Images/Events/AsiaExpo.jpg" },
