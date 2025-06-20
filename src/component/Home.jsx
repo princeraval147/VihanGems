@@ -22,7 +22,7 @@ const HomePage = () => {
         {
             title: 'Growing the Rough Diamond',
             date: 'Step 1',
-            description: 'Sustainably sourced from ethical mines with full traceability.',
+            description: 'Grown by Science, Rooted in Nature.',
             icon: <GiMineTruck />,
             bgColor: '#1e3a8a',
         },
