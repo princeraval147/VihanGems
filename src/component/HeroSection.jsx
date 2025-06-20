@@ -6,9 +6,9 @@ export default function HeroSection() {
     return (
         <>
             {/* Sparkle Particles */}
-            <div className="absolute inset-0 z-10 pointer-events-none">
+            {/* <div className="absolute inset-0 z-10 pointer-events-none">
                 <SparkleParticles />
-            </div>
+            </div> */}
 
             {/* Background Video */}
             <video
@@ -23,7 +23,8 @@ export default function HeroSection() {
             </video>
 
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/95 via-[#0e0f1d]/80 to-transparent" />
+            {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/50 via-[#0e0f1d]/25 to-transparent" /> */}
+            <div className="absolute inset-0 z-10" />
             {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/95 via-[#0e0f1d]/90 to-[#0e0f1d]/60 sm:to-transparent" /> */}
             {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0e0f1d]/90 via-[#0e0f1d]/70 to-transparent" /> */}
 
