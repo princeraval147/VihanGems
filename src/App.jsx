@@ -34,8 +34,6 @@ const App = () => {
     };
   }, []);
 
-
-
   return (
     <>
       <ScrollToTop />
