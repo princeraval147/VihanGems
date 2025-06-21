@@ -15,6 +15,7 @@ import {
 } from 'react-vertical-timeline-component';
 import { GiDiamondHard, GiMineTruck, GiCutDiamond } from 'react-icons/gi';
 import { MdLocalShipping, MdCheckCircle } from 'react-icons/md';
+import SparkleParticles from "./SparkleParticles";
 
 const HomePage = () => {
 
@@ -87,7 +88,9 @@ const HomePage = () => {
 
             {/* <div style={{ fontFamily: "Playfair Display" }} id="home" className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#374a58] to-[#F8FAFC] text-white font-sans overflow-x-hidden"> */}
             {/* <div className="absolute inset-0 bg-black/50 z-0" /> */}
-
+            <div className="fixed inset-0 z-0 pointer-events-none">
+                <SparkleParticles />
+            </div>
             <div style={{ fontFamily: "Playfair Display" }} id="home" className="min-h-screen bg-gradient-to-br from-[#0F172A] to-[#1e2a38] text-white font-sans overflow-x-hidden">
 
                 <WhatsAppButton />
