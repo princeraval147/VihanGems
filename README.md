@@ -10,6 +10,10 @@ Visit: [https://www.vihangems.in](https://www.vihangems.in)
 
 ---
 
+⚠⚠⚠
+This code and content may not be reused, copied, or redistributed without permission.
+⚠⚠⚠
+
 ## 🔮 Features
 
 ### 🖼️ Frontend Experience
