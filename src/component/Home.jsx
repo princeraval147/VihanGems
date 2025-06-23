@@ -16,6 +16,7 @@ import {
 import { GiDiamondHard, GiMineTruck, GiCutDiamond } from 'react-icons/gi';
 import { MdLocalShipping, MdCheckCircle } from 'react-icons/md';
 import SparkleParticles from "./SparkleParticles";
+import ExportGlobe from "./ExportGlobe";
 
 const HomePage = () => {
 
@@ -194,9 +195,11 @@ const HomePage = () => {
                 <EventDetail />
 
                 {/* <GlobalPresenceMap /> */}
-                <Suspense fallback={<div>Loading map...</div>}>
+                {/* <Suspense fallback={<div>Loading map...</div>}>
                     <GlobalPresenceMap />
-                </Suspense>
+                </Suspense> */}
+
+                <ExportGlobe />
 
 
 
