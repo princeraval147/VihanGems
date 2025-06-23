@@ -57,7 +57,7 @@ const Header = () => {
                             key={link.name}
                             to={link.to}
                             onClick={closeMenu}
-                            className="block hover:text-blue-300"
+                            className="block font-sans text-white hover:text-blue-400 text-lg font-bold tracking-wide transition duration-200"
                         >
                             {link.name}
                         </NavLink>
@@ -83,7 +83,7 @@ const Header = () => {
                             key={link.name}
                             to={link.to}
                             onClick={closeMenu}
-                            className="block hover:text-blue-300"
+                            className="block font-sans text-white hover:text-blue-400 text-lg font-bold tracking-wide transition duration-200"
                         >
                             {link.name}
                         </NavLink>

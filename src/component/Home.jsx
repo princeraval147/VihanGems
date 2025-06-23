@@ -125,7 +125,7 @@ const HomePage = () => {
                     {/* Decorative Background Element */}
 
                     <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-12 relative z-10">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 max-w-5xl mx-auto">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 px-4 max-w-5xl mx-auto">
                             {[1, 2, 3, 4].map((i) => (
                                 <motion.div
                                     key={i}

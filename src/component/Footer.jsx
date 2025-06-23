@@ -94,19 +94,22 @@ const Footer = () => {
                         </span>
                     </a>
                 </div>
-
-                {/* <div>
-                    <p className="text-sm leading-6">
-                        Vihan Gems Pvt. Ltd.<br />
-                        1st Floor Sankalp Building, <br />
-                        Beside Gopal Locho, <br />
-                        Mahidharpura, Surat, India - 395003
-                    </p>
-                </div> */}
             </div>
 
-            <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/70 px-4">
-                &copy; {new Date().getFullYear()} Vihan Gems. All rights reserved.
+            <div className="text-center py-4 text-sm text-gray-500">
+                © {new Date().getFullYear()} Vihan Gems. All rights reserved.
+                <br />
+                <span className="text-gray-400">
+                    Developed by
+                    <a
+                        href="https://platinumsofttech.com"
+                        className="text-blue-500 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {" "}Platinum Tech
+                    </a>
+                </span>
             </div>
         </footer>
     );
