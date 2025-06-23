@@ -34,7 +34,7 @@ const Header = () => {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <NavLink to="/" onClick={closeMenu}>
+                <NavLink to="/#home" onClick={closeMenu}>
                     <img
                         src="Images/VihanGems.png"
                         alt="Vihan Gems"

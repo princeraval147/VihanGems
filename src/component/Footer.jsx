@@ -16,13 +16,12 @@ const Footer = () => {
             {/* <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10"> */}
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
-
                 {/* Logo & Description */}
                 <div className='flex flex-col items-center'>
                     <NavLink to="/#home" className="flex items-center mb-2">
                         <img src="/Images/VihanGems.png" alt="Vihan Gems" className="h-12 mb-2" />
                     </NavLink>
-                    <p className="text-sm leading-6">
+                    <p className="text-sm leading-6 text-center">
                         Vihan Gems is a premium diamond company specializing in precision, trust, and brilliance.
                     </p>
                     <div className="flex gap-4 mt-2 flex-wrap">
