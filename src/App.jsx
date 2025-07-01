@@ -6,33 +6,33 @@ import ScrollToTop from './component/ScrollToTop'
 
 const App = () => {
 
-  // useEffect(() => {
-  //   const handleContextMenu = (e) => {
-  //     e.preventDefault();
-  //   };
-  //   document.addEventListener('contextmenu', handleContextMenu);
-  //   return () => {
-  //     document.removeEventListener('contextmenu', handleContextMenu);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+    };
+    document.addEventListener('contextmenu', handleContextMenu);
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+    };
+  }, []);
 
-  // useEffect(() => {
-  //   const handleKeyDown = (e) => {
-  //     if (
-  //       e.key === 'F12' ||
-  //       (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-  //       (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-  //       (e.ctrlKey && e.key === 'U') ||
-  //       (e.ctrlKey && e.key === 'S') // disable Ctrl+S (optional)
-  //     ) {
-  //       e.preventDefault();
-  //     }
-  //   };
-  //   document.addEventListener('keydown', handleKeyDown);
-  //   return () => {
-  //     document.removeEventListener('keydown', handleKeyDown);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.key === 'S') // disable Ctrl+S (optional)
+      ) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
