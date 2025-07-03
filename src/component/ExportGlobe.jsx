@@ -28,25 +28,44 @@ const ExportGlobe = () => {
 
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
+    const containerRef = useRef();
     useEffect(() => {
         const globe = globeEl.current;
         if (!globe) return;
 
-        const interval = setInterval(() => {
-            const controls = globe.controls?.();
-            if (controls) {
-                controls.enableZoom = false; // disables zoom only
-                controls.autoRotate = true;
-                controls.autoRotateSpeed = 1;
-                controls.minDistance = isMobile ? 400 : 300;
-                controls.maxDistance = isMobile ? 400 : 300;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const controls = globe.controls?.();
+                if (!controls) return;
 
+                if (entry.isIntersecting) {
+                    // When in view
+                    controls.autoRotate = true;
+                    controls.enableZoom = false;
+                    controls.autoRotateSpeed = 1;
+                    controls.minDistance = isMobile ? 400 : 300;
+                    controls.maxDistance = isMobile ? 400 : 300;
 
-                clearInterval(interval);
-            }
-        }, 100);
+                    // Focus on India (optional: only if not already focused)
+                    globe.pointOfView({
+                        lat: origin.coordinates[1],
+                        lng: origin.coordinates[0],
+                        altitude: 1.5
+                    }, 1000);
+                } else {
+                    // When out of view
+                    controls.autoRotate = false;
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of the element is visible
+        });
 
-        return () => clearInterval(interval);
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => observer.disconnect();
     }, []);
 
 
@@ -54,7 +73,7 @@ const ExportGlobe = () => {
 
 
     return (
-        <div className=" relative w-full h-screen overflow-hidden">
+        <div ref={containerRef} className=" relative w-full h-screen overflow-hidden">
 
             <div className="h-[600px] w-full">
                 <Globe
