@@ -80,9 +80,9 @@ const Footer = () => {
                 <div>
                     <h4 className="font-semibold text-base md:text-lg mb-4">Our Location</h4>
                     <a
-                        href="https://maps.app.goo.gl/tScUet7GxLzWyo8B8?g_st=iw"
+                        // href="https://maps.app.goo.gl/tScUet7GxLzWyo8B8?g_st=iw"
+                        href="https://maps.app.goo.gl/xg8r7SxyR54ZBjyNA"
                         target="_blank"
-                        rel="noreferrer"
                         className="flex items-start gap-2 text-sm hover:text-gray-300"
                     >
                         <LocationPinIcon className="mt-1" />
