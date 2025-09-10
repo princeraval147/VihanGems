@@ -3,6 +3,7 @@ import Header from './component/Header'
 import { Outlet } from 'react-router-dom'
 import Footer from './component/Footer'
 import ScrollToTop from './component/ScrollToTop'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
 
@@ -36,6 +37,19 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      // transition={Bounce}
+      />
       <ScrollToTop />
       <Header />
       <Outlet />
