@@ -15,6 +15,20 @@ const events = [
             { type: "video", url: "/Images/Events/AsiaExpoVIdeo.mp4" },
         ],
     },
+    {
+        title: "Vihan Gems at JEWELLRY & GEM",
+        date: "15-19 Sept, 2025",
+        location: "ASIA Hong Kong",
+        description:
+            "Vihan Gems proudly showcased its sustainable diamond collections at the Jewellery & Gem Fair in Hong Kong, engaging with global buyers and industry leaders.",
+        media: [
+            // { type: "image", url: "/Images/Event2/AsiaHongKongBanner.jpg" },
+            { type: "image", url: "/Images/Event2/AsiaHongKong2.jpg" },
+            { type: "image", url: "/Images/Event2/AsiaHongKong1.jpg" },
+            { type: "image", url: "/Images/Event2/AsiaHongKong3.jpg" },
+            { type: "video", url: "/Images/Event2/AsiaHongKongVideo.mp4" },
+        ],
+    },
 ];
 
 const MediaCarousel = ({ media }) => {
