@@ -17,7 +17,7 @@ This code and content may not be reused, copied, or redistributed without permis
 ## 🔮 Features
 
 ### 🖼️ Frontend Experience
-- Hero section with 360° video, particles, and animated text.
+- Hero section with particles, and animated text.
 - About Us, Mission, and Vision with scroll animations.
 - Team section with hover effects.
 - Journey of a Diamond timeline.
